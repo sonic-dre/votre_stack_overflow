@@ -12,6 +12,7 @@ import {
 import "./globals.css";
 import React from "react";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -75,7 +76,7 @@ export default function RootLayout({
               <UserButton />
             </SignedIn>
           </header>
-          {children}
+          <ThemeProvider>{children}</ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
